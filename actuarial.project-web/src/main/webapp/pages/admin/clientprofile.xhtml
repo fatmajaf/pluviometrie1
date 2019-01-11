@@ -1,0 +1,993 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+		xmlns:jsf="http://xmlns.jcp.org/jsf">
+<h:head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"></meta>
+    <meta charset="utf-8"></meta>
+     
+
+<link rel="stylesheet" href="https://raw.githubusercontent.com/richfaces4/components/master/mobile-compatibility/slidfast.css" />
+<script type="text/javascript" src="https://raw.githubusercontent.com/richfaces4/components/master/mobile-compatibility/slidfast.js"></script>
+
+ 
+
+<script type="text/javascript">
+
+  slidfast({
+
+      defaultPageID:'home-page', //required. the ID of your default page
+
+      callback: 'handleHashChange', //optional. a javascript function to call after navigation happens (typically your a4j:jsfunction method)
+
+      backButtonID: 'back-button' //optional
+
+  });
+
+</script>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 26%;
+        width : 135%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  <title>InsureIt | Client Profile</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"></meta>
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css"></link>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css"></link>
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css"></link>
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css"></link>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"></link>
+</h:head>
+<h:body class="hold-transition skin-blue sidebar-mini">
+
+<link rel="stylesheet" href="https://raw.githubusercontent.com/richfaces4/components/master/mobile-compatibility/rf-mobile-skin.css" />
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="../../index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>I</b>IT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Insure</b>IT</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"></img>
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image"></img>
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image"></img>
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image"></img>
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image"></img>
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">#{clientBean.clientsraintoday.size()}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have #{clientBean.clientsraintoday.size()} notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                 <c:forEach var="cli" items="#{clientBean.clientsraintoday}">
+                 
+                  <li>
+                  
+                    <a href="#" jsf:action="#{singleClientBean.populateProfileClient(cli)}">
+                      <i class="fa fa-users text-red"></i> #{cli.nom} #{cli.prenom} : rain level exceeds the 
+                      <br></br>
+                      threshhold in the next few days !
+                   
+                    </a>
+                     
+                  </li>
+                   <h:form id="formu"> 
+            
+                    <h:commandButton value="View Profile"
+																action="#{singleClientBean.populateProfileClient(cli)}"
+																class="btn btn-primary btn-xs" type="submit"/>
+                     
+                  </h:form>
+                 </c:forEach>
+                  
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Some task I need to do
+                        <small class="pull-right">60%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">60% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Make beautiful transitions
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../dist/img/avatarcli.png" class="user-image" alt="User Image"></img>
+              <span class="hidden-xs">#{loginBean.us.nom}  #{loginBean.us.prenom}</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../dist/img/avatarcli.png" class="img-circle" alt="User Image"></img>
+               <p>
+                 #{loginBean.us.nom}  #{loginBean.us.prenom}
+                  <small>Member</small>
+                </p>
+              </li>    
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../../dist/img/avatarcli.png" class="img-circle" alt="User Image"></img>
+        </div>
+        <div class="pull-left info">
+          <p>#{loginBean.us.nom}  #{loginBean.us.prenom}</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          <br></br>
+            <h:form>
+											<a jsf:action="#{loginBean.doLogout()}"><i class="fa fa-circle text-success"></i>
+											Sign out</a>
+											</h:form>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search..."></input>
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+      	<li><a href="/actuarial.project-web/pages/admin/home2.xhtml" style="color: #b8c7ce"> <i class="fa fa-dashboard"></i>
+											<span>Subscribe a client</span> <span class="pull-right-container" style="color: #b8c7ce">
+												
+										</span>
+									</a></li>
+									
+										<li><a href="#" style="color: #b8c7ce"> <i class="fa fa-dashboard"></i>
+											<span>Pricing</span> <span class="pull-right-container" style="color: #b8c7ce">
+												
+										</span>
+									</a></li>
+									<li><a href="/actuarial.project-web/pages/leaflet-owm.html" style="color: #b8c7ce"> <i class="fa fa-dashboard"></i>
+											<span>Weather Map</span> <span class="pull-right-container" style="color: #b8c7ce">
+												
+										</span>
+									</a></li>
+										<li><a href="/actuarial.project-web/pages/admin/clientsmanagement.xhtml" style="color: #b8c7ce"> <i class="fa fa-dashboard"></i>
+											<span>Client portfolio management</span> <span class="pull-right-container" style="color: #b8c7ce">
+												
+										</span>
+									</a></li>
+									
+										<li><a href="/actuarial.project-web/pages/admin/relevance.xhtml" style="color: #b8c7ce"> <i class="fa fa-dashboard"></i>
+											<span>Application relevance</span> <span class="pull-right-container" style="color: #b8c7ce">
+												
+										</span>
+									</a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Client Profile
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Client management</a></li>
+        <li class="active">Client profile</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <div class="row">
+        <div class="col-md-3">
+
+          <!-- Profile Image -->
+          <div class="box box-danger">
+            <div class="box-body box-profile">
+              <img class="profile-user-img img-responsive img-circle" src="../../dist/img/avatar3.png" alt="User profile picture"></img>
+
+              <h3 class="profile-username text-center">#{singleClientBean.client.prenom}   #{singleClientBean.client.nom}</h3>
+
+              <p class="text-muted text-center">client id : #{singleClientBean.client.id}</p>
+
+              <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <b>City :</b> <a class="pull-right">#{singleClientBean.client.ville}</a>
+                </li>
+                <br></br>
+                  <b>Since : </b> <a class="pull-right">#{singleClientBean.client.datesouscription}</a>
+                
+                
+              </ul>
+
+            
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+          <!-- About Me Box -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">About #{singleClientBean.client.prenom} #{singleClientBean.client.nom}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <strong><i class="fa  fa-cloud margin-r-5"></i> rainfall threshold :</strong>  #{singleClientBean.client.seuil}
+               <hr></hr>
+             <strong><i class="fa   fa-money margin-r-5"></i> Turnover : </strong> #{singleClientBean.client.CAmax}
+               <hr></hr>
+              
+           <strong><i class="fa  fa-money margin-r-5"></i> Fixed price : </strong> #{singleClientBean.client.cf_fixe}
+             <hr></hr>
+            <strong><i class="fa  fa-money margin-r-5"></i> Premium : </strong>   #{singleClientBean.client.contract.primes.get(singleClientBean.client.contract.primes.size()-1).tarif}
+              <hr></hr>
+              </div>
+            <!-- /.box-body -->
+             <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title" style="font: bolder;">Let's Calculate !</h3>
+            </div>
+            <div class="box-body">
+            <h:form id="form">
+            <form method="post" id="f">
+            
+            <div class="form-group">
+											<label  class="col-sm-3 control-label">Turnover : </label>
+
+											<div class="col-sm-9">
+												<div class="form-group has-feedback">
+													<h:inputText value="#{singleClientBean.ca}"
+														id="validateca" required="true" class="form-control"
+														partialSubmit="true" onblur="myFunc(this)">
+														<f:ajax />
+														<f:ajax event="keyup"
+															listener="#{singleClientBean.changesmanagement()}"
+															execute="validateca" />
+													</h:inputText>
+												</div>
+											</div>
+
+											<div id="respoonse" hidden="hidden">
+
+												<span class="help-block" style="color: #dd4b39;"><i
+													class="fa fa-times-circle-o"></i>input must be numeric</span>
+											</div>
+										</div>
+            
+            
+               <div class="form-group">
+											<label  class="col-sm-3 control-label">Fixed price : </label>
+
+											<div class="col-sm-9">
+												<div class="form-group has-feedback">
+													<h:inputText value="#{singleClientBean.cf}"
+														id="validatecf" required="true" class="form-control"
+														partialSubmit="true" onblur="myFunc2(this)">
+														<f:ajax />
+														<f:ajax event="keyup"
+															listener="#{singleClientBean.changesmanagement()}"
+															execute="validatecf" />
+													</h:inputText>
+												</div>
+											</div>
+
+											<div id="respoonse1" hidden="hidden">
+
+												<span class="help-block" style="color: #dd4b39;"><i
+													class="fa fa-times-circle-o"></i>input must be numeric</span>
+											</div>
+											
+										</div>
+            
+            <h:panelGroup id="foo">
+            <div id="respoonse2">
+
+												<span class="help-block" style="color: #dd4b39;"> #{singleClientBean.msgval}</span>
+											</div>
+											<div id="c">
+												<div class="col-md-3 col-sm-12 col-xs-12">
+													<div class="info-box">
+														<span class="info-box-icon bg-aqua"><i
+															class="ion ion-ios-gear-outline"></i></span>
+
+														<div class="info-box-content">
+															<span class="info-box-text">Result</span> <span
+																class="info-box-number">
+																#{singleClientBean.result}</span> 
+																
+																<span class="info-box-text">Turnover</span> <span
+																class="info-box-number">
+																#{singleClientBean.resultca}</span> 
+														</div>
+														<!-- /.info-box-content -->
+													</div>
+													<!-- /.info-box -->
+												</div>
+
+											</div>
+										</h:panelGroup>
+            
+            
+            
+            </form>
+            </h:form>
+            	<script type="text/javascript">
+             function myFunc(input) {
+        	   if (!$.isNumeric(input.value))
+       	    { this.value = 0;
+       	       $("#respoonse").show();
+       
+       	       }
+       	    else {$("#respoonse").hide();}
+           }
+             function myFunc2(input) {
+          	   if (!$.isNumeric(input.value))
+         	    { this.value = 0;
+         	    $("#respoonse1").show();}
+         	    else {$("#respoonse1").hide();
+                   
+
+         	    }
+        	   
+             }
+           </script>
+            </div>
+            </div>
+            
+          </div>
+          
+          
+          <!-- /.box -->
+        </div>
+     <div class="col-md-5">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Map</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+
+
+
+
+            <div id="map"></div>
+   <h:inputText id="lat" value="#{singleClientBean.client.lat}"  style="display:none"></h:inputText>
+     <h:inputText id="lon" value="#{singleClientBean.client.lon}" style="display:none"></h:inputText>
+    
+  <script type="text/javascript" language="javascript">
+       function initMap() {
+    	  var lat = document.getElementById("lat");
+      	  var lon = document.getElementById("lon");
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: {lat:46.227638,lng:2.213749000000007}
+        });
+             var l=lat.value;
+    	      var lo=lon.value;
+    	      //alert("ddd"+l);
+    	  var myLatLng5 = {lat: parseFloat(l) , lng:  parseFloat(lo)};
+          var marker2 = new google.maps.Marker({
+            position: myLatLng5,
+            map: map,
+            title: 'yess'
+          });	 
+ }
+    </script>
+    <script async="async" defer="defer"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm3yLNOzIPWGmM5u4y61LAFUlIVniLkzo&amp;callback=initMap">
+    </script>
+    
+    </div></div></div></div></div></div>
+        
+         
+         
+         <div class="col-md-4">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Today Results according to the weather</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+                     <div class="callout callout-info" style="width: 135%">
+        <h4>Today!</h4>
+      Precipitation  : #{singleClientBean.precipitation}
+      <H4 style="font: bold;">#{singleClientBean.notification}</H4>
+       
+      </div>
+                    
+            <c:if test="#{singleClientBean.precipitation.floatValue() ==0}">
+           
+            Weather : #{singleClientBean.weatherDescription} <img src="#{singleClientBean.weathericon}" class="img-circle" alt="User Image"></img>
+      <p> <h4><span style="color: #00c0ef; font:bolder;"> Turnover : </span>#{singleClientBean.client.CAmax} </h4> </p>
+     <p> <h4><span style="color: #00c0ef; font: bolder;"> Result   : </span> #{singleClientBean.client.CAmax - singleClientBean.client.cf_fixe}</h4> </p>
+        </c:if>        
+                  <c:if test="#{singleClientBean.precipitation.floatValue() !=0}">
+                  <c:if test="#{singleClientBean.precipitation.floatValue() &gt; singleClientBean.client.seuil}">
+      <p> <h4><span style="color: #00c0ef; font:bolder;"> Turnover : </span>0 </h4> </p>
+     <p> <h4><span style="color: #00c0ef; font: bolder;"> Result   : </span> #{-singleClientBean.client.cf_fixe}</h4> </p>
+      
+        </c:if>   
+         <c:if test="#{singleClientBean.precipitation.floatValue() &lt; singleClientBean.client.seuil}">
+      <p> <h4><span style="color: #00c0ef; font:bolder;"> Turnover : </span> #{((singleClientBean.client.seuil.floatValue()-singleClientBean.precipitation.floatValue())/singleClientBean.client.seuil)* singleClientBean.client.CAmax} </h4> </p>
+     <p> <h4><span style="color: #00c0ef; font: bolder;"> Result   : </span> #{((singleClientBean.client.seuil.floatValue()-singleClientBean.precipitation.floatValue())/singleClientBean.client.seuil)* (singleClientBean.client.CAmax-singleClientBean.client.cf_fixe}</h4> </p>
+      
+        </c:if>   
+        </c:if>   
+                    
+                    </div></div></div></div></div></div>
+         
+         
+          
+         
+         
+         <div class="col-md-5">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Weather Report</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+    
+  
+    <iframe src="#{singleClientBean.srcweatherwidget}"   frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 135%;height: 70%"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="#{singleClientBean.aweatherwidget}" target="_blank">meteoblue</a></div>
+  
+  </div></div></div></div></div></div>
+         
+         
+          
+         <div class="col-md-4">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Annual Results</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+                     <div class="callout callout-info" style="width: 135%">
+        <h4>Let's time travel and stuff !</h4>
+      Precipitation (Average) : #{singleClientBean.moypluviometrie} <br></br>
+      Number of rainy days : #{singleClientBean.nbjourspluviometrie} 
+      <H4 style="font: bold;">#{singleClientBean.notifann}</H4>
+       
+      </div>
+                    
+                 
+                 
+                  <c:if test="#{singleClientBean.moypluviometrie &gt; singleClientBean.client.seuil}">
+      <p> <h4><span style="color: #00c0ef; font:bolder;"> Turnover : </span>0 </h4> </p>
+     <p> <h4><span style="color: #00c0ef; font: bolder;"> Result   : </span> #{-singleClientBean.client.cf_fixe * singleClientBean.nbjourspluviometrie}</h4> </p>
+      
+        </c:if>   
+         <c:if test="#{singleClientBean.moypluviometrie &lt; singleClientBean.client.seuil}">
+      <p> <h4><span style="color: #00c0ef; font:bolder;"> Turnover : </span> #{(((singleClientBean.client.seuil.floatValue()-singleClientBean.precipitation.floatValue())/singleClientBean.client.seuil)* singleClientBean.client.CAmax)*singleClientBean.nbjourspluviometrie} </h4> </p>
+     <p> <h4><span style="color: #00c0ef; font: bolder;"> Result   : </span> #{(((singleClientBean.client.seuil.floatValue()-singleClientBean.precipitation.floatValue())/singleClientBean.client.seuil)* (singleClientBean.client.CAmax-singleClientBean.client.cf_fixe)*singleClientBean.nbjourspluviometrie}</h4> </p>
+      
+        </c:if>   
+        
+                    
+                    </div></div></div></div></div></div>
+         
+         
+             <div class="col-md-4">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Forecast weather (5days)</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                  <div class="pad">
+                    <!-- Map will be created here -->
+                     <div class="callout callout-danger" style="width: 135%">
+        <h4>In the coming days!</h4>
+      <H4 style="font: bold;">Number of times where precipitation exceeds the treshhold  : </H4> #{singleClientBean.precipssupseuil.size()}
+   
+       
+      </div>
+        <div class="col-md-8 col-sm-4">
+           <c:forEach var="v" items="#{singleClientBean.dateprecipssupseuil}">  
+            <strong><i class="fa   fa-clock-o margin-r-5"></i> #{v} : </strong>   
+
+            
+
+              <br></br>
+           
+           </c:forEach>
+           </div>
+                    <div class="col-md-3 col-sm-4">
+           <c:forEach var="v" items="#{singleClientBean.precipssupseuil}">  
+            <strong> #{v}</strong>   
+
+            
+  <br></br>
+              
+          
+           </c:forEach>
+           </div>
+            
+                    </div></div></div></div></div></div>
+         
+       
+       
+       
+       
+       
+       
+       
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright  2018-2019 <a href="https://adminlte.io">JTC</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked="checked"></input>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked="checked"></input>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked="checked"></input>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked="checked"></input>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right"></input>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+
+
+</h:body>
+</ui:composition>

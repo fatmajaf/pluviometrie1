@@ -1,0 +1,391 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+		xmlns:jsf="http://xmlns.jcp.org/jsf">
+		
+
+
+<h:head>
+	<!-- Basic Page Needs -->
+	<meta charset="UTF-8"></meta>
+	
+	<title>InsureIT</title>
+
+	<meta name="author" content="themsflat.com"></meta>
+
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+
+	<!-- Boostrap style -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/bootstrap.css"></link>
+
+	<!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/style.css"></link>
+
+	<!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="../../stylesheet/colors/color1.css" id="colors"></link>  
+
+	<!-- Reponsive -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/responsive.css"></link>>
+
+	<!-- Animation Style -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/animate.css"></link>
+
+	<!-- Favicon and touch icons  -->
+    <link href="../../icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed"></link>
+    <link href="../../icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed"></link>
+    <link href="../../icon/favicon.png" rel="shortcut icon"></link>
+
+</h:head>
+	<h:body>
+		<div class="boxed blog">
+		<!-- Preloader -->
+	    <div class="preloader">
+	        <div class="clear-loading loading-effect-2">
+	            <span></span>
+	        </div>
+	    </div>
+		
+
+			<div class="top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="flat-infomation">
+								<li class="phone">Call us: <a href="+61383766284" title="phone">+33 766869940</a></li>
+								<li class="email">Email: <a href="mailto:support24-7@gmail.com" title="email">InsureIT@gmail.com</a></li>
+							</ul><!-- /flat-infomation -->
+							<div class="flat-questions">
+								<a href="#" title="" class="questions">Have any questions?</a>
+								<a href="#" title="" class="appointment">GET AN APPOINTMENT</a>
+							</div><!-- /.flat-questions -->
+							<div class="clearfix"></div><!-- /.clearfix -->
+						</div>
+					</div>
+				</div>
+			</div><!-- /.top -->
+			<header id="header" class="header bg-color">
+				<div class="container">
+					<div class="row">
+						<div class="header-wrap">
+							<div class="col-md-2">
+								<div id="logo" class="logo">
+									<a href="#" title="">
+										<img src="../../img/unnamed.png" alt="logo Finance Business" />
+									</a>
+								</div><!-- /#logo -->
+							</div><!-- /.col-md-3 -->
+							
+						</div><!-- /.header-wrap -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</header><!-- /header -->
+			
+			<div class="page-title">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="page-title-heading">
+								<h1 class="h1-title">Subscription</h1>
+							</div><!-- /.page-title-heading -->
+							
+							<div class="clearfix"></div><!-- /.clearfix -->
+						</div>
+					</div>
+				</div>
+			</div><!-- /.page-title -->
+<DIV  style="text-align: center "><h2>you can fill this form to subscribe </h2>
+<p> afetr hitting subscribe please wait until the system generates your pricing plan and your login and password and send it to you using the email address that you will give to us 
+</p>
+<p> Dear client, your security matter to us so your password will be crypted. </p>
+</DIV>
+			<section class="flat-row pd-contact-v1">
+				<div class="container">
+					<div class="row">
+					
+						
+						 <div class="col-md-12">
+          <!-- MAP & BOX PANE -->
+          <div class="box box-success">
+            
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="row">
+                <div class="col-md-9 col-sm-8">
+                            <h:form id="form" styleClass="form-horizontal">
+            
+              <div class="box-body">
+              <p:messages id="messages" showDetail="true" closable="true">
+        
+    </p:messages>
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">Last name : </label>
+
+                  <div class="col-sm-10">
+			 <p:inputText id="lastname" value="#{clientaddBean2.nom}" label="Last name" styleClass="form-control"  required="true">
+                <f:validateLength minimum="2" />
+                  <f:validateRequired for="lastname"/>	
+                 
+                <p:ajax update="msgLastname" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="lastname" id="msgLastname" display="required" />
+                  
+                  
+                  </div>
+                </div>
+                
+                
+                
+                <div class="form-group">
+                  <label  class="col-sm-2 control-label">First name : </label>
+
+                  <div class="col-sm-10">
+                     <p:inputText id="firstname" value="#{clientaddBean2.prenom}" label="First name" styleClass="form-control"  required="true">
+                <f:validateLength minimum="2" />
+                  <f:validateRequired for="firstname"/>	
+                <p:ajax update="msgFirstname" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="firstname" id="msgFirstname" display="required" />
+                  
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Email : </label>
+
+                  <div class="col-sm-10">
+                        <p:inputText id="email" value="#{clientaddBean2.email}" label="Email" styleClass="form-control"  required="true">
+                <f:validateLength minimum="2" />
+                 <f:validator validatorId="com.fatma.EmailValidator"/>
+                  <f:validateRequired for="email"/>	
+                <p:ajax update="msgEmail" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="email" id="msgEmail" display="required" />
+                  </div>
+                </div>
+                
+                
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Phone number : </label>
+
+                  <div class="col-sm-10">
+                    <p:inputText id="tel" value="#{clientaddBean2.tel}" label="Phone number" styleClass="form-control"  required="true">
+               
+                <f:validator validatorId="com.fatma.PhoneValidator"/>
+                  <f:validateRequired for="tel"/>	
+                <p:ajax update="msgTel" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="tel" id="msgTel" display="required" />
+                  </div>
+                </div>
+                
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">City : </label>
+
+                  <div class="col-sm-10">
+                  
+                  
+                                  
+
+               <p:autoComplete id="countryList" value="#{clientaddBean2.ville}" completeMethod="#{clientaddBean2.countryList()}"  />  
+                  
+                  
+                  </div>
+                </div>
+                
+                
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Turnover : </label>
+                  <div class="col-sm-10">
+                  <p:inputText id="ca" value="#{clientaddBean2.CAmax}" label="Ca" styleClass="form-control"  required="true">
+               
+              
+                  <f:validateRequired for="ca"/>	
+                <p:ajax update="msgCa" event="keyup" 
+                listener="#{clientaddBean2.changesmanagement()}"
+															execute="ca"
+                
+                />
+            </p:inputText><br></br>
+            <p:message for="ca" id="msgCa" display="required" />
+                 
+                 
+                  </div>
+                </div>
+         
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Fixed price : </label>
+                  <div class="col-sm-10">
+                   <p:inputText id="cf" value="#{clientaddBean2.cf_fixe}" label="Cf" styleClass="form-control"  required="true">
+               
+                  <f:validateRequired for="cf"/>	
+                <p:ajax update="msgCf" event="keyup" 
+                 listener="#{clientaddBean2.changesmanagement()}"
+															execute="cf"/>
+            </p:inputText><br></br>
+            <p:message for="cf" id="msgCf" display="required" />                  </div>
+                </div>
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Contract period : </label>
+                  <div class="col-sm-10">
+                 <p:inputText id="pe" value="#{clientaddBean2.periodedecouverture}" label="Pe" styleClass="form-control"  required="true">
+               
+              
+                  <f:validateRequired for="pe"/>	
+                <p:ajax update="msgPe" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="pe" id="msgPe" display="required" />
+                  </div>
+                </div>
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Sector : </label>
+                  <div class="col-sm-10">
+                 <p:autoComplete id="sectorList" value="#{clientaddBean2.secteur}"   cache="true" cacheTimeout="30000" completeMethod="#{clientaddBean2.sectorList()}"  />  
+                
+                  </div>
+                </div>
+             
+                 <div class="form-group">
+                  <label  class="col-sm-2 control-label">Threshold: </label>
+                  <div class="col-sm-10">
+                  <p:inputText id="se" value="#{clientaddBean2.seuil}" label="Se" styleClass="form-control"  required="true">
+               
+             
+                  <f:validateRequired for="se"/>	
+                <p:ajax update="msgSe" event="keyup" />
+            </p:inputText><br></br>
+            <p:message for="se" id="msgSe" display="required" />
+                  </div>
+                </div>
+                
+                
+                 <h:panelGroup id="foo">
+            <div id="respoonse2">
+
+												<span class="help-block" style="color: #dd4b39;"> #{clientaddBean2.msgval}</span></div>
+												</h:panelGroup>
+                
+                
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                
+                 <h:commandButton action="#{clientaddBean2.cancel()}" styleClass="btn btn-default"  value="Cancel" />
+               <h:commandButton action="#{clientaddBean2.ajouterClient()}" styleClass="btn btn-info pull-right"  value="Subscribe" />
+              </div>
+            
+    
+            </h:form>
+                </div>
+                <!-- /.col -->
+                
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <!-- /.box -->
+      
+          
+         
+  
+          <!-- /.row -->
+
+          
+        </div>
+        <!-- /.col -->
+
+
+
+						
+						
+						
+						
+								
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section><!-- /.flat-row-iconbox -->  
+
+			<!-- map -->
+	        <section class="flat-row pdmap">
+				<div class="flat-maps" data-address="Thành phố New York, Tiểu bang New York" data-height="454" data-images="../../images/map/map-1.png" data-name="Themesflat Map"></div>
+	            <div class="gm-map">	            
+	                <div class="map"></div>                        
+	            </div>
+	        </section>
+
+			<footer id="footer">
+			<div class="footer-widgets">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="widget-infomation">
+								<ul class="infomation-footer">
+									<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#" title="">InsureIT@gmail.com</a></li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i><a href="#" title="">+33 766869940</a></li>
+									<li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#" title="">Nice: Meteorological Insurance -France</a></li>
+								</ul><!-- /.infomation-footer -->
+							</div><!-- /.widget-infomation -->
+						</div><!-- /.col-md-12 -->
+					</div><!-- /.row -->
+					
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="copyright">
+								<p>Copyright 2019 <a href="#" title=""></a></p>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div><!-- /.footer-bottom -->
+			</div>
+			</div>
+			
+		</footer><!-- /#footer -->
+
+			
+			<div class="button-go-top">
+				<a href="#" title="" class="go-top">
+					<i class="fa fa-chevron-up"></i>
+				</a>
+			</div>
+	
+		</div> <!-- /.boxed -->
+
+	<!-- Javascript -->
+    <script type="text/javascript" src="../../javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="../../javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../javascript/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="../../javascript/jquery.easing.js"></script>
+    
+    <script type="text/javascript" src="../../javascript/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../../javascript/gmap3.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcNjdyQ_xJKXqTnbGIhw7jlls3idn9rZM"></script>
+    <script type="text/javascript" src="../../javascript/waypoints.min.js"></script>
+    <script type="text/javascript" src="../../javascript/main.js"></script>
+
+
+	</h:body>
+
+</ui:composition>

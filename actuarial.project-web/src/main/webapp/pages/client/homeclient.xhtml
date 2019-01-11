@@ -1,0 +1,329 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+		xmlns:jsf="http://xmlns.jcp.org/jsf">
+		
+
+
+<h:head>
+	<!-- Basic Page Needs -->
+	<meta charset="UTF-8"></meta>
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<title>InsureIT</title>
+
+	<meta name="author" content="themsflat.com"></meta>
+
+	<!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+
+	<!-- Boostrap style -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/bootstrap.css"></link>
+
+	<!-- Theme style -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/style.css"></link>
+
+	<!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="../../stylesheet/colors/color1.css" id="colors"></link>  
+
+	<!-- Reponsive -->
+	<link rel="stylesheet" type="text/css" href="../../stylesheet/responsive.css"></link>
+
+	<!-- Favicon and touch icons  -->
+    <link href="../../icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed"></link>
+    <link href="../../icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed"></link>
+    <link href="../../icon/favicon.png" rel="shortcut icon"></link>
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'></link>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'></link>
+
+      <link rel="stylesheet" href="../css/style.css"></link>
+</h:head>
+	<h:body>
+
+ <header id="header" class="header bg-color">
+			<div class="container">
+				<div class="row">
+					<div class="header-wrap">
+						<div class="col-md-2">
+							<div id="logo" class="logo">
+								<a href="#" title="">
+									<img src="../../img/unnamed.png" alt="logo Finance Business" />
+								</a>
+								 <h:form>
+											<a jsf:action="#{loginBean.doLogout()}"><i class="fa fa-circle text-success"></i>
+											Sign out</a>
+											</h:form>
+							</div><!-- /#logo -->
+						</div><!-- /.col-md-3 -->
+						<div class="col-md-10">
+							
+							
+							<div class="nav-wrap">
+								<div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+								<nav id="mainnav" class="mainnav">
+									
+								</nav><!-- /#mainnav -->
+							</div><!-- /.nav-wrap -->
+						</div><!-- /.col-md-9 -->
+					</div><!-- /.header-wrap -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</header><!-- /header -->
+
+<div class="page-title">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-title-heading">
+							<h1 class="h1-title">Home</h1>
+						</div><!-- /.page-title-heading -->
+						<ul class="breadcrumbs">
+							<li><a href="#" title="">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+							<li><a href="#" title="">My Blog</a></li>
+						</ul><!-- /.breadcrumbs -->
+						<div class="clearfix"></div><!-- /.clearfix -->
+					</div>
+				</div>
+			</div>
+		</div><!-- /.page-title -->
+
+
+
+
+
+
+
+<div id="generic_price_table">
+<section class="main-content">
+			
+      
+        <div class="container">
+        
+     
+        
+                
+            
+                <div>
+            <!--BLOCK ROW START-->
+            <div class="row">
+                
+                 
+                 
+                  
+        <div class="col-md-6">
+        
+        <h2 class="post-title"><a href="#" title="">Don’t let the weather dictate what your profits should be anymore !</a></h2>
+        
+        <h3 class="widget-title">AN INDEX-BASED WEATHER COVERAGE</h3>
+        An index-based weather cover is a type of insurance that is triggered when the index exceeds a predefined value.
+
+The index is rainfall levels that represent the weather risk your business is exposed to.
+The cover is designed to compensate exactly or partially the losses incurred through adverse weather conditions. All possibilities are covered.
+
+The compensation may be fixed when the weather index exceeds a predefined value.
+        As with any index-based insurance, it is when a pre-defined index value is exceeded that the loss, in traditional insurance terms, occurs.
+
+The index value is the sole trigger for compensation.
+
+No claim adjustment process, no additional administrative procedures are required.
+        
+        <p> 
+        
+        
+        </p>
+        </div>
+        
+                 
+                 
+                 
+                 
+                 
+                <div class="col-md-6">
+                <h:form>
+                	<!--PRICE CONTENT START-->
+                    <div class="generic_content active clearfix">
+                        
+                        <!--HEAD PRICE DETAIL START-->
+                        <div class="generic_head_price clearfix">
+                        
+                            <!--HEAD CONTENT START-->
+                            <div class="generic_head_content clearfix">
+                            
+                            	<!--HEAD START-->
+                                <div class="head_bg"></div>
+                                <div class="head">
+                                    <span>Standard</span>
+                                </div>
+                                <!--//HEAD END-->
+                                
+                            </div>
+                            <!--//HEAD CONTENT END-->
+                            
+                            <!--PRICE START-->
+                            <div class="generic_price_tag clearfix">	
+                                <span class="price">
+                                    <span class="sign">€</span>
+                                    <span class="currency"> #{loginBean.clientco.contract.primes.get(0).tarif} </span>
+                                    <span class="cent">/</span> 
+                                    <span class="month">Year</span>
+                                </span>
+                            </div>
+                            <!--//PRICE END-->
+                            
+                        </div>                            
+                        <!--//HEAD PRICE DETAIL END-->
+                          
+                        <!--FEATURE LIST START-->  
+                        <div class="generic_feature_list">
+                        	<ul>
+                            	<li><span>Premium </span> #{loginBean.clientco.contract.primes.get(loginBean.clientco.contract.primes.size()-1).tarif}</li>
+                                <li><span>Threshold</span> #{loginBean.clientco.seuil}</li>
+                                <li><span>amount guaranteed</span> #{loginBean.clientco.contract.garanti.get(0).montantgaranti}</li>
+                                <li><span>Contract duration</span> #{loginBean.clientco.periodedecouverture}</li>
+                                <li><span>Starting from </span> #{loginBean.clientco.datesouscription}</li>
+                            </ul>
+                        </div>
+                        <!--//FEATURE LIST END-->
+                        
+                        <!--BUTTON START-->
+                        <div class="generic_price_btn clearfix">
+                 <h:commandButton value="View Profile" action="#{singleClientBean.populateProfileClientclient()}" class="btn btn-primary btn-xs" />
+                 <BR ></BR> <h:commandButton value="print estimate" action="#{loginBean.imprimerDevis1()}" class="btn btn-primary btn-xs" />
+                        </div>
+                        <!--//BUTTON END-->
+                        
+                    </div>
+                    <!--//PRICE CONTENT END-->
+                        </h:form>
+                </div>
+              
+            </div>	
+            <!--//BLOCK ROW END-->
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="row">
+					<div class="col-md-12">
+						<div class="title-section left">
+							<h2>How it works ?</h2>
+						</div><!-- /.title-section -->
+					</div>
+				</div><!-- /.row -->
+
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="iconbox-item">
+							<div class="iconbox style1">
+								<div class="box-header">
+									<div class="icon-rounded ion-clipboard">
+										
+									</div><!-- /.icon-rounded -->
+									<div class="box-title">
+										<a href="'#" title="">INDEX</a>
+									</div><!-- /.box-title -->
+								</div><!-- /.box-header -->
+								<div class="box-content">
+									You subscribe and enter the rainfall level that best reflects your risk
+								</div><!-- /.box-content -->
+							</div><!-- /.iconbox -->
+						</div><!-- /.iconbox-item -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+						<div class="iconbox-item">
+							<div class="iconbox style1">
+								<div class="box-header">
+									<div class="icon-rounded line-chart">
+										
+									</div>
+									<div class="box-title">
+										<a href="'#" title="">COVER</a>
+									</div>
+								</div><!-- /.box-header -->
+								<div class="box-content">
+									InsureIt always tracks the rainfall level in your business area using the most trusted meteo webservices
+								</div><!-- /.box-content -->
+							</div><!-- /.iconbox -->
+						</div><!-- /.iconbox-item -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+						<div class="iconbox-item">
+							<div class="iconbox style1">
+								<div class="box-header">
+									<div class="icon-rounded clock">
+										
+									</div>
+									<div class="box-title">
+										<a href="'#" title="">PAYMENT</a>
+									</div>
+								</div><!-- /.box-header -->
+								<div class="box-content">
+									In case of adverse weather, the payment is automatically triggered
+								</div><!-- /.box-content -->
+							</div><!-- /.iconbox -->
+						</div><!-- /.iconbox-item -->
+					</div><!-- /.col-md-4 -->
+
+				</div><!-- /.row -->
+        
+        
+        
+        
+        
+        
+        
+        </div>
+    </section>   
+    </div>          
+		<footer id="footer">
+			<div class="footer-widgets">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="widget-infomation">
+								<ul class="infomation-footer">
+									<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#" title="">InsureIT@gmail.com</a></li>
+									<li><i class="fa fa-phone" aria-hidden="true"></i><a href="#" title="">+33 766869940</a></li>
+									<li><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#" title="">Nice: Meteorological Insurance -France</a></li>
+								</ul><!-- /.infomation-footer -->
+							</div><!-- /.widget-infomation -->
+						</div><!-- /.col-md-12 -->
+					</div><!-- /.row -->
+					
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="copyright">
+								<p>Copyright 2019<a href="#" title=""></a></p>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div><!-- /.footer-bottom -->
+			</div>
+			</div>
+			
+		</footer><!-- /#footer -->
+
+  
+  
+</h:body>
+</html>
